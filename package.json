@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "run-install": "concurrently \"yarn install\" \"cd ./client & yarn install\" ",
-    "start": "nodemon -r dotenv/config index.js",
+    "start-server": "nodemon -r dotenv/config index.js",
+    "start-client": "cd ./client & yarn start-client",
+    "start": "concurrently \"yarn start-server\" \"yarn start-client\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
