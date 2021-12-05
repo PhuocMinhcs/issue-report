@@ -31,38 +31,6 @@ router.get('/', async (req, res) => {
         const { page, per_page } = req.query;
         const offset = page ? DEFAULT_PER_PAGE * (page - 1) : 0;
         const limit = per_page ? per_page : DEFAULT_PER_PAGE;
-        await ReportedIssues.create({
-            issue_name: 'Issue 5',
-            issue_desc: 'Issue 5 desc',
-            issue_category: 'HOT_DESK',
-            is_customer_posted: false,
-            is_solved: true,
-            issue_image: '',
-        })
-        // await ReportedIssues.create({
-        //     issue_name: 'Issue 6',
-        //     issue_desc: 'Issue 6 desc',
-        //     issue_category: 'HOT_DESK',
-        //     is_customer_posted: false,
-        //     is_solved: true,
-        //     issue_image: '',
-        // })
-        // await ReportedIssues.create({
-        //     issue_name: 'Issue 7',
-        //     issue_desc: 'Issue 7 desc',
-        //     issue_category: 'HOT_DESK',
-        //     is_customer_posted: false,
-        //     is_solved: true,
-        //     issue_image: '',
-        // })
-        // await ReportedIssues.create({
-        //     issue_name: 'Issue 8',
-        //     issue_desc: 'Issue 8 desc',
-        //     issue_category: 'HOT_DESK',
-        //     is_customer_posted: false,
-        //     is_solved: true,
-        //     issue_image: '',
-        // })
 
         const { count, rows } = await ReportedIssues.findAndCountAll({ limit, offset , raw: true });
 
