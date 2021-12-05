@@ -1,0 +1,8 @@
+.btn-link {
+    &:focus {
+        box-shadow: none;
+    }
+
+    text-decoration: none;
+    color: var(--main-text-color);
+}

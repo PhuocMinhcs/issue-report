@@ -1,0 +1,59 @@
+.application-details {
+    padding: 15px;
+
+    * {
+        color: var(--main-text-color);
+    }
+
+    .aplication-name {
+        margin-bottom: 15px;
+    }
+
+    [class^="col-"]>div {
+        background: var(--card-color);
+    }
+
+    .left-content {
+        border-radius: 15px;
+        overflow: hidden;
+        padding: 15px;
+
+        img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            border-radius: 10px;
+            color: #e2e2e2;
+            padding: 10px 0;
+        }
+    }
+
+    .right-content {
+        border-radius: 15px;
+        overflow: hidden;
+        padding: 15px;
+
+        .content-header {
+            h2 {
+                font-size: 1.25rem;
+                margin: 0;
+            }
+        }
+
+        .card {
+            padding: 15px;
+            border-radius: 10px;
+
+            &.left {
+                background: #554d36;
+            }
+
+            &.right {
+                background: #314749;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+$text-color: #a6abb4;
+
+.application-item {
+    .card {
+        background-color: #252730;
+        border-radius: 1.5rem;
+        padding: 15px;
+        padding-bottom: 30px;
+    }
+
+    .card-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        color: $text-color;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .dropdown {
+        button {
+            background-color: #1f2127 !important;
+            border-radius: 100%;
+            width: 35px;
+            height: 35px;
+
+            &::after {
+                content: "...";
+                border: none;
+                position: absolute;
+                top: 1px;
+                display: block;
+            }
+        }
+    }
+
+    .card-body {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+
+        .card-img-top {
+            width: 150px;
+        }
+    }
+
+    .application-chart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $text-color;
+        margin: 0 0 25px;
+
+        p {
+            margin: 0;
+        }
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .view-application {
+        position: relative;
+
+        .shadow {
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            right: 10px;
+            bottom: -12px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #747882;
+                border-radius: 15px;
+                z-index: 2;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 12px;
+                left: 10px;
+                right: 10px;
+                bottom: -12px;
+                background-color: #42444e;
+                border-radius: 15px;
+                z-index: 1;
+            }
+        }
+
+        .btn {
+            color: #d0d1d2;
+            width: 100%;
+            background-color: #1f2127;
+            border-radius: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: relative;
+            border: none;
+            z-index: 3;
+        }
+    }
+}
